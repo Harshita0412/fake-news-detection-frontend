@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake News Detection | AI/ML</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+
+        <section class="hero">
+
+            <div class="badge">
+                AI / ML · NLP · RNN
+            </div>
+
+            <h1>
+                Fake News<br>
+                <span>Detection</span>
+            </h1>
+
+            <p class="subtitle">
+                Analyze news articles using an RNN-based deep learning model
+                trained for fake news classification.
+            </p>
+
+        </section>
+
+
+        <!-- Prediction Card -->
+
+        <section class="prediction-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Run a Prediction</h2>
+
+                    <p>
+                        Put the model to work.
+                    </p>
+                </div>
+
+                <div class="api-status">
+                    <span class="status-dot"></span>
+                    API Connected
+                </div>
+
+            </div>
+
+
+            <!-- Article Input -->
+
+            <div class="input-section">
+
+                <div class="input-label-row">
+
+                    <label for="article">
+                        Article Text
+                    </label>
+
+                    <span id="wordCount">
+                        0 words
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="article"
+                    placeholder="Paste a news article here..."
+                    maxlength="10000"
+                ></textarea>
+
+
+                <div class="input-footer">
+
+                    <button
+                        type="button"
+                        id="sampleBtn"
+                        class="secondary-btn"
+                    >
+                        Load Sample Article
+                    </button>
+
+                    <span id="charCount">
+                        0 / 10,000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Predict Button -->
+
+            <button
+                type="button"
+                id="predictBtn"
+                class="predict-btn"
+            >
+                <span id="buttonText">
+                    Classify Article
+                </span>
+
+                <span id="loader" class="loader hidden"></span>
+            </button>
+
+
+            <!-- Error -->
+
+            <div
+                id="errorBox"
+                class="error-box hidden"
+            ></div>
+
+
+            <!-- Result -->
+
+            <div
+                id="result"
+                class="result hidden"
+            >
+
+                <div class="result-header">
+                    <span>Model Prediction</span>
+                </div>
+
+
+                <div class="prediction-result">
+
+                    <div>
+
+                        <p class="result-label">
+                            Prediction
+                        </p>
+
+                        <h3 id="prediction">
+                            —
+                        </h3>
+
+                    </div>
+
+
+                    <div class="confidence">
+
+                        <p class="result-label">
+                            Model Confidence
+                        </p>
+
+                        <strong id="confidence">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="confidence-bar">
+
+                    <div
+                        id="confidenceFill"
+                        class="confidence-fill"
+                    ></div>
+
+                </div>
+
+
+                <p class="disclaimer">
+                    This confidence score represents how strongly the
+                    trained model leans toward its prediction. It does
+                    not establish whether the article is factually true
+                    or false.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Model -->
+
+        <section class="info-section">
+
+            <div class="info-card">
+
+                <span class="info-number">
+                    01
+                </span>
+
+                <h3>
+                    Natural Language Processing
+                </h3>
+
+                <p>
+                    The article text is converted into numerical sequences
+                    using a trained tokenizer before being processed by
+                    the neural network.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span class="info-number">
+                    02
+                </span>
+
+                <h3>
+                    Recurrent Neural Network
+                </h3>
+
+                <p>
+                    An RNN-based deep learning model analyzes the sequence
+                    of words and generates a classification prediction.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span class="info-number">
+                    03
+                </span>
+
+                <h3>
+                    Live API Prediction
+                </h3>
+
+                <p>
+                    The interface communicates with a deployed Python
+                    API and returns the model's prediction and confidence
+                    score.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                Built with Python · TensorFlow · NLP · RNN
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
